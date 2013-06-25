@@ -15,3 +15,16 @@ public function actionCreate($place_id = 0)
 		'model'=>$model,
 	));
 }
+
+// create an entry for sending this message in the outbox
+protected function afterSave()
+{
+  // add new item to outbox table
+   $outbox=new Outbox;
+		$outbox->post_id=$this->id;
+   $outbox->status=Outbox::STATUS_PENDING;
+   $outbox->created_at =new CDbExpression('NOW()'); 
+   $outbox->modified_at =new CDbExpression('NOW()');          
+		$outbox->save();      		
+  return parent::afterSave();
+}
