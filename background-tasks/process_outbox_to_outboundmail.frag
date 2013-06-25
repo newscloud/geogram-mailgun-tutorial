@@ -1,4 +1,8 @@
-// determine recipient list for outbound messages
+/*
+ Takes messages posted to groups and performs pre-processing
+ - Determines recipient list
+ - Places msgs in to outbound mail tables for secondary processing
+*/
 public function process($count=100) {
 	  // Determine recipient lists to deliver to Mailgun
     $criteria = new CDbCriteria();

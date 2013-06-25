@@ -1,3 +1,8 @@
+/*
+ Takes pre-processed outbound messages and hands them off to Mailgun via the Mailgun API
+ - Builds recipient variables as JSON string
+ - Calls send broadcast message
+*/
 public function process($count=100) {
    // Fetch message and recipient list & Send with Mailgun
    // Fetch msgs pending in Outbound

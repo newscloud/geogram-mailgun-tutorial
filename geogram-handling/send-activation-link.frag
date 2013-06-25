@@ -1,5 +1,6 @@
 /**
- * Send to user mail
+Example of sending activation link to user via rewrite of standard php function 
+- rewritten version goes directly outbound via Mailgun API
  */
 public static function sendMail($email,$subject,$message) {
   	$supportEmail = Yii::app()->params['supportEmail'];

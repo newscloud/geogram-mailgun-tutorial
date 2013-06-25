@@ -5,4 +5,4 @@ This code is related to the tutorial about using Mailgun with Geogram.com. You c
 
 This code is open source via GPL. If you choose to, please attribute Geogram / http://geogram.com.
 
-You can also follow me @reifman on Twitter or at my blog http://jeffreifman.com.
+You can also follow me @reifman (https://twitter.com/intent/user?screen_name=reifman) on Twitter or at my blog http://jeffreifman.com.

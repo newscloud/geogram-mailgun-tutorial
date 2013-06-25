@@ -1,3 +1,7 @@
+/*
+  This is the outer processing loop Geogram uses for Inbound messages
+  - we unserialize the post from Mailgun (previously serialized & stored in the database)
+*/
 public function process($count=100) {
   // processes commands in the inbox
   $this->configMailgun();

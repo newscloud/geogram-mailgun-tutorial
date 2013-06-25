@@ -1,3 +1,6 @@
+/*
+How Geogram configures Mailgun with private API key 
+*/
 public function configMailgun() {
   //set the project identifier based on GET input request variables
   $this->_api_key = Yii::app()->params['mailgun']['api_key'];
@@ -5,7 +8,8 @@ public function configMailgun() {
 }
 
 /*
- Mailgun Library Functions
+ Curl setup shortcuts for most Mailgun Messaging API calls
+ - note: some API calls have different arguments
 */	
 private function setup_curl($command = 'messages') {
   $ch = curl_init();

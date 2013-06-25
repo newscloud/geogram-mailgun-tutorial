@@ -1,3 +1,6 @@
+/*
+ PHP example of sending broadcast message via curl to Mailgun
+*/
 public function send_broadcast_message($from='support@yourdomain.com',$subject='',$body='',$recipient_list='',$recipient_vars='',$post_id=0) {
         $ch = $this->setup_curl('messages');
         curl_setopt($ch,

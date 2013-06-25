@@ -1,3 +1,7 @@
+/*
+ PHP example of sending simple message via curl to Mailgun
+*/
+
 public function send_simple_message($to='',$subject='',$body='',$from='') {
   if ($from == '') 
     $from = Yii::app()->params['supportEmail'];

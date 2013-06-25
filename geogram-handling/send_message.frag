@@ -1,4 +1,7 @@
-// Render create form and create new message via the website
+/*
+ Render create form and create new message via the website
+ - saves new posts to the outbox table, status = pending
+*/
 public function actionCreate($place_id = 0)
 {
 	$model=new Post;

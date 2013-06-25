@@ -1,3 +1,5 @@
+// Example Yii Migration for creating table for posts
+
   public function before() {
     $this->tablePrefix = Yii::app()->getDb()->tablePrefix;
     if ($this->tablePrefix <> '')

@@ -1,4 +1,7 @@
 // Lookup place from slug / get place_id / create new message
+// e.g. match place-name@geogram.com to a specific place 
+// check that sender is a valid member - allowed to post
+// create a new post in the database - which will get picked up by next processing loop
   $place = Place::model()->findByAttributes(array('slug'=>$slug));  	    
     if ($place === null) {
       // send alert - we don't know that address

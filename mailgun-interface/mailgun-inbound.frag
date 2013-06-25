@@ -1,5 +1,6 @@
-/* Receives posted form from Mailgun with inbound commands
-  Places data into inbox table in serialized form
+/* 
+  Controller called when Mailgun posts data from inbound mail
+    - Places data into inbox table in serialized form
 */
 public function actionInbound()
 {

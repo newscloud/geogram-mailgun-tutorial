@@ -1,3 +1,8 @@
+/*
+Example of sending a private message to a user
+- check that they aren't blocked
+- handoff to mailgun via send_simple_message
+*/
 public function sendPrivateMessage($from,$subject,$body,$to) {
   $this->init();
   $mg = new Mailgun();
