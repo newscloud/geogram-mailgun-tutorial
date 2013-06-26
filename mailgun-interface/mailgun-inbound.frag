@@ -3,9 +3,13 @@
     - Places data into inbox table in serialized form
 */
 public function actionInbound()
-{
-  // optional - verify Mailgun tokens for security
-  $bundle = serialize($_POST);
-  $inboxItem = new Inbox;
-  $inboxItem->addBundle($bundle);
+{	  
+  $mg = new Mailgun;
+   // verify post made by Mailgun
+    if ($mg->verifyWebHook($_POST['timestamp'],$_POST['token'],$_POST['signature'])) {
+  	  $bundle = serialize($_POST);
+  	  $inboxItem = new Inbox;
+  	  $inboxItem->addBundle($bundle);
+    }	    
 }
+
